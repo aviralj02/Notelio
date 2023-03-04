@@ -1,13 +1,12 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+import Image from 'next/image';
+import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  return (
-    <div className='text-red-400'>
-      Hello World
-    </div>
-  )
+	return (
+		<div className="">
+			<h1>Notelio</h1>
+		</div>
+	);
 }
