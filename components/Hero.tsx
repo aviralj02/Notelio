@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Inter, Poppins } from 'next/font/google';
 import React from 'react';
 import { inter, poppins } from '@/lib/utils/get-class';
 
