@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { Inter, Poppins } from 'next/font/google';
 import React from 'react';
-
-const inter = Inter({ subsets: ['latin'] });
-const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
+import { inter, poppins } from '@/lib/utils/get-class';
 
 type Props = {};
 
@@ -12,19 +10,21 @@ const Hero = (props: Props) => {
 		<div className="flex flex-col gap-6 justify-center items-center h-screen px-4">
 			<div className="flex flex-col gap-5">
 				<h1
-					className={`text-8xl text-left sm:text-9xl ${poppins.className} font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-400`}
+					className={`text-8xl text-left sm:text-9xl ${poppins} font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-400`}
 				>
 					Notelio
 				</h1>
 				<p
-					className={`${inter.className} text-xl text-[#C8C8C8] sm:max-w-md text-left sm:text-center max-w-full`}
+					className={`${inter} text-xl text-[#C8C8C8] sm:max-w-md text-left sm:text-center max-w-full`}
 				>
 					A comprehensive note taking application. Made with <span className="text-red-500">❤</span>{' '}
 					by <span className="text-[#EAEAEA] font-semibold">Sanyam</span> &{' '}
 					<span className="text-[#EAEAEA] font-semibold">Aviral</span>
 				</p>
 			</div>
-			<div className="cursor-pointer text-[#EAEAEA] transition-all flex gap-3 items-center hover:gap-4 w-full sm:justify-center">
+			<div
+				className={`cursor-pointer ${inter} text-[#EAEAEA] transition-all flex gap-3 items-center hover:gap-4 w-full sm:justify-center`}
+			>
 				<Link
 					href="#"
 					target="_blank"
